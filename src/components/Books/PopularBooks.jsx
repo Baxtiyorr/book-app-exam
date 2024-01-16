@@ -2,7 +2,7 @@ import { getPopularBooks } from '../../redux/slice/popularBookFetch';
 import { useDispatch, useSelector } from 'react-redux'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect } from 'react';
-
+import { API_KEY } from '../../config/apis';
 import rates from '../../assets/Icons/rates.svg'
 
 
@@ -18,7 +18,7 @@ const PopularBooks = () => {
     
     console.log(popularBookData);
     useEffect(() =>{
-        dispatch(getPopularBooks(`https://www.googleapis.com/books/v1/volumes?q=popular+inauthor:keyes&key=AIzaSyCwGYpkfGpJVXIVrR7Qo39pWNqxG149Ssk`))
+        dispatch(getPopularBooks(`https://www.googleapis.com/books/v1/volumes?q=popular+inauthor:keyes&key=${API_KEY}`))
     }, [])
   return (
     <>

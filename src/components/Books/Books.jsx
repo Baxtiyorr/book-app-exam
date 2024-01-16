@@ -1,6 +1,7 @@
 import { getBooks } from '../../redux/slice/booksFetchSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { useFilterContext } from '../useContext/FilterContext';
+import { API_KEY } from '../../config/apis';
 
 import rates from '../../assets/Icons/rates.svg'
 
@@ -22,7 +23,7 @@ const Books = () => {
     console.log(selectedGenre);
     console.log(mainData);
     useEffect(() =>{
-        dispatch(getBooks(`https://www.googleapis.com/books/v1/volumes?q=${selectedGenre}+inauthor:keyes&key=AIzaSyCwGYpkfGpJVXIVrR7Qo39pWNqxG149Ssk`))
+        dispatch(getBooks(`https://www.googleapis.com/books/v1/volumes?q=${selectedGenre}+inauthor:keyes&key=${API_KEY}`))
     }, [selectedGenre])
   return (
     <div>

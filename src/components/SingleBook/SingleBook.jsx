@@ -6,6 +6,7 @@ import start from '../../assets/Icons/start.svg'
 import { FaRegSquarePlus } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa";
 import './SingleBook.scss'
+import { API_KEY } from '../../config/apis';
 
 
 const SingleBook = () => {
@@ -20,7 +21,7 @@ const SingleBook = () => {
     
 
     useEffect(() =>{
-        dispatch(getSingleBooks(`https://www.googleapis.com/books/v1/volumes/${bookId}?key=AIzaSyCwGYpkfGpJVXIVrR7Qo39pWNqxG149Ssk`))
+        dispatch(getSingleBooks(`https://www.googleapis.com/books/v1/volumes/${bookId}?key=${API_KEY}`))
     },[])
 
   return (

@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import { getPopularBooks } from "../../redux/slice/popularBookFetch"
 import { useEffect } from "react";
+import { API_KEY } from '../../config/apis';
 
 
 
@@ -18,7 +19,7 @@ const Recommended = () => {
 
     console.log(rec_data);
     useEffect(() =>{
-        dispatch(getPopularBooks('https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyCwGYpkfGpJVXIVrR7Qo39pWNqxG149Ssk'))
+        dispatch(getPopularBooks(`https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=${API_KEY}`))
     },[])
   return (
     <section className='mt-[160px]'>

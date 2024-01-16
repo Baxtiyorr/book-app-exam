@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useFilterContext } from '../useContext/FilterContext';
 import { useEffect } from 'react';
 import { getStoryBooks } from '../../redux/slice/storySlice';
+import { API_KEY } from '../../config/apis';
 import rates from '../../assets/Icons/rates.svg'
 
 
@@ -19,7 +20,7 @@ const NewStory = () => {
 
     console.log(selectedGenre);
     useEffect(() =>{
-        dispatch(getStoryBooks(`https://www.googleapis.com/books/v1/volumes?q=${selectedGenre ? selectedGenre : 'story'}+inauthor:keyes&key=AIzaSyCwGYpkfGpJVXIVrR7Qo39pWNqxG149Ssk`))
+        dispatch(getStoryBooks(`https://www.googleapis.com/books/v1/volumes?q=${selectedGenre ? selectedGenre : 'story'}+inauthor:keyes&key=${API_KEY}`))
     }, [selectedGenre])
 
 
