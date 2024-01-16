@@ -1,0 +1,25 @@
+.search-icon{
+    padding: 20px 0 20px 15px ;
+    background-color: #F5F6F8;
+    width: 50px;
+}
+.hero__content{
+    max-width: 723px;
+    width: 100%;
+    & h1{
+        font-weight: 700;
+        font-size: 75px;
+        line-height: 95px;
+    }
+    & h2{
+        font-family: 'Rambla', sans-serif;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 30px;
+        margin: 15px 0 25px 0;
+    }
+    & .form input {
+        max-width: 356px;
+        width: 100%;
+    }
+}

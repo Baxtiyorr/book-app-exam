@@ -1,0 +1,25 @@
+.popular-book{
+    width: 188px;
+    &-img{
+        box-shadow: 0px 0px 16px 0px rgba(160,137,137,0.75);
+-webkit-box-shadow: 0px 0px 16px 0px rgba(160,137,137,0.75);
+-moz-box-shadow: 0px 0px 16px 0px rgba(160,137,137,0.75);
+    }
+    & h2{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        margin-top: 25px;
+        margin-bottom: 12px;
+    }
+    & span{
+        color: gray;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+.swiper-wrapper{
+    display: flex;
+    align-items: center;
+}

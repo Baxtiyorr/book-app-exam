@@ -1,0 +1,31 @@
+.recommended-book{
+    display: flex;
+    align-items: center;
+    column-gap: 23px;
+    background-color: white;
+    padding: 14px 66px 19px 17px;
+    width: 100%;
+
+}
+.recomendation__wrapper{
+    max-width: 550px;
+    &-title{
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 42px;
+        color: white;
+        margin-bottom: 32px;
+    }
+}
+.recomendation__card{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+@media screen and (max-width:1180px) {
+    .recomendation__wrapper{
+        margin: 0 auto;
+    
+    }
+}
